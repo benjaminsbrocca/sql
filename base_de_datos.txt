@@ -1,0 +1,31 @@
+Base de datos de un e-commerce
+
+Problema del negocio:
+
+Este e-commerce de ropa estaba teniendo dificultades para gestionar las órdenes de los clientes, para asociar cada orden con los productos correspondientes y controlar el stock. Tampoco 
+había un registro de los métodos de pago utilizados por los clientes ni una forma para asociar más de un producto a una sola orden, lo que generaba confusión para hacer devoluciones o modificaciones.
+
+La solución fue crear una base de datos relacional que permitiera:
+
+1-Gestionar el stock de productos correctamente.
+2-Asociar cada orden con un producto o más.
+3-Controlar el historial de ventas y los métodos de pago.
+4-Mejorar la eficiencia al manejar información de los clientes.
+
+Relaciones entre las tablas:
+
+-Productos y detalle_orden: Relación de uno a muchos. Un producto puede estar en varias órdenes.
+-Clientes y ordenes: Relación de uno a muchos. Un cliente puede realizar varias órdenes.
+-Metodos_pago y ordenes: Relación de uno a muchos. Cada orden tiene un método de pago, y un método de pago puede usarse en varias órdenes.
+-Ordenes y detalle_orden: Relación de uno a muchos. Una orden puede incluir varios productos.
+-Productos y categorias: Relación de muchos a muchos.
+
+
+Solución al problema:
+
+Antes de integrar esta base de datos, el comercio electrónico tenía problemas con la gestión del stock y no podía registrar más de un producto en una misma orden de manera eficiente. Con esta base de datos relacional se pudo realizar:
+
+1-Se resolvió el problema del stock, ya que cada producto tiene un campo stock, y el sistema puede actualizar el stock cuando se hace una venta.
+2-La tabla detalle_orden puede registrar fácilmente múltiples productos en una sola orden, lo cual facilita la gestión de carritos de compra y devoluciones.
+3-El historial de métodos de pago y clientes está ahora claramente asociado a cada transacción, lo que hace más fácil la revisión de las compras que se realizan.
+4-Este modelo relacional permite que el e-commerce gestione sus operaciones de manera más eficiente y escalable.
